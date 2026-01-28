@@ -1,0 +1,202 @@
+:root {
+    --primary: #2c3e50;
+    --secondary: #27ae60;
+    --bg: #f4f7f6;
+    --text: #333;
+    --white: #ffffff;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.summary-card {
+    background: var(--secondary);
+    color: white;
+    padding: 15px 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.table-responsive {
+    background: var(--white);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 800px;
+}
+
+th {
+    text-align: left;
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-bottom: 2px solid #eee;
+    color: var(--primary);
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+
+td {
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+    font-size: 14px;
+}
+
+tr:hover {
+    background-color: #fcfcfc;
+}
+
+.badge {
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.status-active { background: #e8f5e9; color: #2e7d32; }
+.status-pending { background: #ffebee; color: #c62828; }
+
+.spreadsheet-footer {
+    display: flex;
+    background-color: #222; /* Dark background from image */
+    padding: 5px 10px;
+    margin-top: 30px;
+    border-top: 1px solid #444;
+    overflow-x: auto;
+    gap: 2px;
+}
+
+.nav-btn {
+    background-color: #333;
+    color: #e67e22; /* Orange text color */
+    border: 1px solid #444;
+    padding: 8px 16px;
+    font-size: 13px;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+/* Specific tab colors from the image */
+.btn-bright-green {
+    background-color: #00ff00 !important;
+    color: #000 !important;
+}
+
+.btn-light-green {
+    background-color: #a9dfbf !important;
+    color: #000 !important;
+}
+
+.active-income {
+    background-color: #fff !important;
+    color: #008080 !important; /* Teal color for Income */
+    border-bottom: 2px solid #008080;
+}
+
+.nav-btn:hover:not(.active-income) {
+    background-color: #444;
+}
+.top-header-actions {
+    display: flex;
+    background-color: #00ff00; /* The bright green from the image */
+    border: 1px solid #000;
+    margin-bottom: 2px;
+    align-items: stretch;
+}
+
+.header-cell {
+    padding: 8px 12px;
+    border-right: 1px solid #000;
+    font-weight: bold;
+    font-style: italic; /* Matches the slanting text in the image */
+    color: #000;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+}
+
+.wide { flex-grow: 2; }
+
+/* The Action Button styled as a Header Cell */
+.header-btn {
+    background-color: #2e7d32; /* Darker green for contrast */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+
+.header-btn:hover {
+    background-color: #1b5e20;
+}
+/* Layout Positioning */
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh; /* Full screen height */
+    overflow: hidden; /* Prevent the whole page from scrolling */
+}
+
+.top-header-actions {
+    flex-shrink: 0; /* Keeps top bar fixed height */
+}
+
+.table-container {
+    flex-grow: 1; /* Makes table take up all middle space */
+    overflow-y: auto; /* Allows only the table to scroll */
+    padding: 10px;
+    background-color: #fff;
+}
+
+.spreadsheet-footer {
+    flex-shrink: 0; /* Keeps bottom tabs fixed at bottom */
+    position: sticky;
+    bottom: 0;
+}
+
+/* Table Styling from Image */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th {
+    background-color: #f2f2f2;
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+td {
+    border: 1px solid #eee;
+    padding: 8px;
+    font-size: 13px;
+}
